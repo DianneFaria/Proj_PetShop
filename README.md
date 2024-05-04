@@ -49,7 +49,7 @@ npm run start
 Para rodar o front-end do programa deve usar os comandos:
 
 ```jsx
-cd atviv-pl-typescript-master
+cd atviv-pl-typescript-master\frontend
 npm install
 npm run start
 ```
