@@ -62,6 +62,9 @@ java -jar pl.jar
 ```
 
 ## 📌 Lista V
+
+**A lista V do projeto PL PetShop tem o objetivo de finalizar o projeto iniciado na lista I, criando uma interface gráfica e integrando com um back-end.**
+
 Para rodar o front-end do programa deve usar os comandos:
 
 ```jsx
