@@ -3,7 +3,7 @@ export default function FormularioCadastroServico(props){
     return (
         <div className="container-fluid">
         <form>
-        <h4>Informações do produto:</h4>
+        <h4>Informações do serviço:</h4>
         <div className="input-group mb-3">
             <input type="text" className="form-control" placeholder="Código do serviço" aria-label="Código do serviço" aria-describedby="basic-addon1" />
         </div>

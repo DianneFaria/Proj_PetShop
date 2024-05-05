@@ -13,6 +13,9 @@ export default class FormularioCadastroCompra extends Component<props> {
                 <form>
                     <h4>Informações da compra:</h4>
                     <div className="input-group mb-3">
+                        <input type="text" className="form-control" placeholder="Código da compra" aria-label="Código da compra" aria-describedby="basic-addon1" />
+                    </div>
+                    <div className="input-group mb-3">
                         <input type="text" className="form-control" placeholder="CPF do cliente" aria-label="CPF do cliente" aria-describedby="basic-addon1" />
                     </div>
                     <div className="input-group mb-3">

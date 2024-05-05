@@ -90,7 +90,7 @@ export default function FormularioCadastroCliente(props) {
                     aria-label="Nome social" 
                     aria-describedby="basic-addon1" />
             </div>
-            <div className="input-group mb-3">
+            <div className="input-group mb-3"> 
                 <input 
                     value={cliente.email} 
                     onChange={(e)=> setCliente({...cliente, email: e.target.value})} 

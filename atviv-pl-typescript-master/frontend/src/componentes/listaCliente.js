@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-// Navigate serve para navegar entre paginas
 import { useNavigate } from "react-router-dom"
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -8,16 +7,13 @@ export default function ListaCliente(props) {
 
     const [clientes, setClientes] = useState([])
 
-    // Declarando a função navigate
     const navigate = useNavigate()
 
-    // Código utiliza o hook useEffect em um componente React
     useEffect(()=> {
         if(clientes.length > 0) return;
         loadClientes()
     }, [])
     
-    // Requisição para listar todos os clientes
     function loadClientes(){
         // Função fetch fazendo uma solicitação HTTP GET para a URL 
         fetch('http://localhost:32831/cliente/clientes', {
@@ -33,7 +29,6 @@ export default function ListaCliente(props) {
 
     
     function excluirCliente(id){
-        // Função fetch para fazer uma solicitação HTTP DELETE
         fetch('http://localhost:32831/cliente/excluir', {
             method: 'DELETE',
             headers: {
