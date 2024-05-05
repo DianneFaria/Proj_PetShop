@@ -62,3 +62,18 @@ java -jar pl.jar
 ```
 
 ## 📌 Lista V
+Para rodar o front-end do programa deve usar os comandos:
+
+```jsx
+cd atvv-pl-typescript-master\frontend
+npm install
+npm run start
+```
+
+Para rodar o back-end do programa deve usar os comandos:
+
+```jsx
+cd atvv-pl-typescript-master\backend
+npm install
+npm run dev:server
+```
