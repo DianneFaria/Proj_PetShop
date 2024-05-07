@@ -37,5 +37,4 @@ export class CreateCompras1714943017214 implements MigrationInterface {
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("compras");
     }
-
 }
