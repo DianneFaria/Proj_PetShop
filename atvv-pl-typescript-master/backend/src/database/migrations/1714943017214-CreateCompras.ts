@@ -18,7 +18,15 @@ export class CreateCompras1714943017214 implements MigrationInterface {
                         type: 'varchar',
                     },
                     {
+                        name: 'nomeCliente',
+                        type: 'varchar',
+                    },
+                    {
                         name: 'cpfCliente',
+                        type: 'varchar',
+                    },
+                    {
+                        name: 'nomeProdServ',
                         type: 'varchar',
                     },
                     {
@@ -26,7 +34,23 @@ export class CreateCompras1714943017214 implements MigrationInterface {
                         type: 'varchar',
                     },
                     {
+                        name: 'valor',
+                        type: 'varchar',
+                    },
+                    {
                         name: 'quantidade',
+                        type: 'varchar',
+                    },
+                    {
+                        name: 'tipoPet',
+                        type: 'varchar',
+                    },
+                    {
+                        name: 'racaPet',
+                        type: 'varchar',
+                    },
+                    {
+                        name: 'totalCompra',
                         type: 'varchar',
                     }
                 ]
