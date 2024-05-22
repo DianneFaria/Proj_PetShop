@@ -81,4 +81,4 @@ npm install
 npm run dev:server
 ```
 Instale mysql e crie um banco de dados com nome "petshop". Na pasta backend\src\database, edite o arquivo chamado "data-source.ts" com as informações de seu banco.
-Cadastre o cliente, pet, produto e serviço para que apareçam nas listagens.
+Cadastre o cliente, pet, produto, serviço e uma compra para que apareçam nas listagens.
