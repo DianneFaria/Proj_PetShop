@@ -26,8 +26,12 @@ import Servico from "../modelo/servico";
 import TopProdutosServicosPorTipoRaca from "../negocio/produtosServicosPorTipo";
 import TopClientesPorValor from "../negocio/topClientesPorValor";
 import ListagemServicos from "../negocio/listagemServicos";
+import ListagemPets from "../negocio/listagemPets";
+import Pet from "../modelo/pet";
+import BuscarCompra from "../negocio/buscaCompra";
 
 console.log(`Bem-vindo ao melhor sistema de gerenciamento de pet shops e clínicas veterinarias`)
+
 let empresa = new Empresa()
 let execucao = true
 
@@ -40,26 +44,28 @@ while (execucao) {
     console.log(`2 - Buscar cliente`);
     console.log(`3 - Atualizar cliente`);
     console.log(`4 - Deletar cliente`);
-    console.log(`5 - Listar todos os clientes`);
-    console.log(`6 - Cadastrar pet`);
-    console.log(`7 - Buscar pet`);
-    console.log(`8 - Atualizar pet`);
-    console.log(`9 - Deletar pet`);
-    console.log(`10 - Cadastrar produto`);
-    console.log(`11 - Buscar produto`);
-    console.log(`12 - Atualizar produto`);
-    console.log(`13 - Deletar produto`);
-    console.log(`14 - Cadastrar serviço`);
-    console.log(`15 - Buscar serviço`);
-    console.log(`16 - Atualizar serviço`);
-    console.log(`17 - Deletar serviço`);
-    console.log(`18 - Registrar consumo`);
+    console.log(`5 - Cadastrar pet`);
+    console.log(`6 - Buscar pet`);
+    console.log(`7 - Atualizar pet`);
+    console.log(`8 - Deletar pet`);
+    console.log(`9 - Cadastrar produto`);
+    console.log(`10 - Buscar produto`);
+    console.log(`11 - Atualizar produto`);
+    console.log(`12 - Deletar produto`);
+    console.log(`13 - Cadastrar serviço`);
+    console.log(`14 - Buscar serviço`);
+    console.log(`15 - Atualizar serviço`);
+    console.log(`16 - Deletar serviço`);
+    console.log(`17 - Registrar compra`);
+    console.log(`18 - Buscar compra`);
     console.log(`19 - Listar top 10 clientes em quantidade de consumo`);
-    console.log(`20 - Produtos e serviços mais consumidos `)
-    console.log(`21 - Listar produtos e serviços por tipo e raça `)
-    console.log(`22 - Listar top 5 clientes em valor`)
-    console.log(`23 - Listar todos os produtos `)
-    console.log(`24 - Listar todos os servicos `)
+    console.log(`20 - Produtos e serviços mais consumidos `);
+    console.log(`21 - Listar produtos e serviços por tipo e raça `);
+    console.log(`22 - Listar top 5 clientes em valor`);
+    console.log(`23 - Listar todos os produtos `);
+    console.log(`24 - Listar todos os servicos `);
+    console.log(`25 - Listar todos os clientes `);
+    console.log(`26 - Listar todos os pets `);
     console.log(`0 - Sair`);  
 
     let entrada = new Entrada()
@@ -84,62 +90,66 @@ while (execucao) {
             deleteCliente.deletar()
             break;
         case 5:
-            let listagem = new ListagemClientes(empresa.getClientes)
-            listagem.listar()
-            break;
-        case 6:
             let cadastroPet = new CadastroPet(empresa.getClientes)
             cadastroPet.cadastrar()
             break; 
-        case 7:
+        case 6:
             let buscaPet = new BuscaPet(empresa.getClientes)
             buscaPet.buscar()
             break;
-        case 8:
+        case 7:
             let atualizacaoPet = new AtualizacaoPet(empresa.getClientes)
             atualizacaoPet.atualizar()
             break;
-        case 9:
+        case 8:
             let deletePet = new DeletePet(empresa.getClientes)
             deletePet.deletar()
             break;
-        case 10:
+        case 9:
             let cadastroProduto = new CadastroProduto(empresa.getProdutos)
             cadastroProduto.cadastrar()
             break;
-        case 11:
+        case 10:
             let buscaProduto = new BuscarProduto(empresa.getProdutos)
             buscaProduto.buscar()
             break;
-        case 12:
+        case 11:
             let atualizacaoProduto = new AtualizacaoProduto(empresa.getProdutos)
             atualizacaoProduto.atualizar()
             break;
-        case 13:
+        case 12:
             let deleteProduto = new DeleteProduto(empresa.getProdutos)
             deleteProduto.deletar()
             break;
-        case 14:
+        case 13:
             let cadastroServico = new CadastroServico(empresa.getServicos)
             cadastroServico.cadastrar()
             break;
-        case 15:
+        case 14:
             let buscaServico = new BuscaServico(empresa.getServicos)
             buscaServico.buscar()
             break;
-        case 16:
+        case 15:
             let atualizacaoServico = new AtualizacaoServico(empresa.getServicos)
             atualizacaoServico.atualizar()
             break;
-        case 17:
+        case 16:
             let deleteServico = new DeleteServico(empresa.getServicos)
             deleteServico.deletar()
             break;
-        case 18:
+        case 17:
             if (!registroConsumo) {
                 registroConsumo = new RegistroConsumo(empresa.getClientes, empresa.getProdutos, empresa.getServicos);
             }
             registroConsumo.registrarConsumo();
+            break;
+        case 18:
+            if (!registroConsumo) {
+                console.log("Registro de consumo não foi inicializado.");
+            } else {
+                let buscaCompra = new BuscarCompra(registroConsumo);
+                buscaCompra.buscar();
+            }
             break;
         case 19:
             if (registroConsumo) {
@@ -181,6 +191,18 @@ while (execucao) {
             let listagemServicos = new ListagemServicos(empresa.getServicos)
             listagemServicos.listar()
             break; 
+        case 25:
+            let listagemClientes = new ListagemClientes(empresa.getClientes)
+            listagemClientes.listar()
+            break;
+        case 26:
+            let todosOsPets: Pet[] = [];
+            empresa.getClientes.forEach(cliente => {
+                todosOsPets = todosOsPets.concat(cliente.getPets);
+            });
+            let listagemPets = new ListagemPets(todosOsPets);
+            listagemPets.listar();
+            break;
         case 0:
             execucao = false
             console.log(`Até mais`)

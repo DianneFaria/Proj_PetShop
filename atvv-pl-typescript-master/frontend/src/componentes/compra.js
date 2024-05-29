@@ -17,6 +17,12 @@ export default function FormularioCadastroCompra(props) {
 
     const compraSubmit = useCallback(async (event) => {
         event.preventDefault();
+        if (!codigoCompra || !nomeCliente || !cpfCliente || !nomeProdServ || !codigoProdServ || 
+            !valor || !quantidade || !tipoPet || !racaPet || !totalCompra
+        ) {
+            alert('Por favor, preencha todos os campos da compra.');
+            return;
+        }
         try {
             const response = await api.post('/compras', {
                 codigoCompra, nomeCliente, cpfCliente, nomeProdServ,

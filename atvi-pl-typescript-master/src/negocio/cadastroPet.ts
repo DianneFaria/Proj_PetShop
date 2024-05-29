@@ -19,7 +19,7 @@ export default class CadastroPet extends Cadastro {
         let nome = this.entrada.receberTexto(`Por favor informe o nome do pet: `)
         let tipo = this.entrada.receberTexto(`Por favor informe o tipo do pet: `)
         let raca = this.entrada.receberTexto(`Por favor informe a raça do pet: `)
-        let genero = this.entrada.receberTexto(`Por favor informe o gênero do pet `)
+        let genero = this.entrada.receberTexto(`Por favor informe o gênero do pet: `)
 
         const cliente = this.encontrarClientePorCPF(cpfDono);
         if (cliente) {

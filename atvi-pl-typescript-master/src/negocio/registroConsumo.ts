@@ -73,4 +73,9 @@ export default class RegistroConsumo {
     public listarTodosOsClientes(): Cliente[] {
         return this.clientes.filter(cliente => this.registro.has(cliente));
     }
+
+    // Método para retornar todos os registros de consumo
+    public getConsumos(): Map<Cliente, Map<Produto | Servico, number>> {
+        return this.registro;
+    }
 }

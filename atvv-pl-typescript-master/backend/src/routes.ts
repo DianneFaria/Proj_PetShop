@@ -20,19 +20,21 @@ router.get("/listaCliente", ClienteController.index);
 router.get("/listaProduto", ProdutoController.index);
 router.get("/listaServico", ServicoController.index);
 router.get("/listaPet", PetController.index);
-router.get("/compras", CompraController.index);
+router.get("/listaCompra", CompraController.index);
 
 // Rotas de atualização
 router.put("/editarCliente/:cpf", ClienteController.update);
 router.put("/editarProduto/:codigoProduto", ProdutoController.update);
 router.put("/editarServico/:codigoServico", ServicoController.update);
 router.put("/editarPet/:nomePet", PetController.update);
+router.put("/editarCompra/:codigoCompra", CompraController.update);
 
 // Rotas de exclusão
 router.delete("/excluirCliente/:cpf", ClienteController.delete);
 router.delete("/excluirProduto/:codigoProduto", ProdutoController.delete);
 router.delete("/excluirServico/:codigoServico", ServicoController.delete);
 router.delete("/excluirPet/:nomePet", PetController.delete);
+router.delete("/excluirCompra/:codigoCompra", CompraController.delete);
 
 // Rotas de análises
 router.get("/compras/top-clientes-quantidade", CompraController.topClientesQuantidade);

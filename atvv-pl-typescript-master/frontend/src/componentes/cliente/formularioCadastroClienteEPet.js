@@ -14,6 +14,10 @@ export default function FormularioCadastroClienteEPet(props) {
 
     const clienteSubmit = useCallback(async (event) => {
         event.preventDefault();
+        if (!nome || !nomeSocial || !cpf || !dataCpf || !rg || !dataRg || !telefone) {
+            alert('Por favor, preencha todos os campos do cliente.');
+            return;
+        }
         try {
             const response = await api.post('/clientes', {
                 nome, nomeSocial, cpf, dataCpf, rg, dataRg, telefone 
@@ -39,6 +43,10 @@ export default function FormularioCadastroClienteEPet(props) {
 
     const petSubmit = useCallback(async (event) => {
         event.preventDefault();
+        if (!cpfDono || !nomePet || !tipo || !raca || !genero) {
+            alert('Por favor, preencha todos os campos do pet.');
+            return;
+        }
         try {
             const response = await api.post('/pets', {
                 cpfDono, nomePet, tipo, raca, genero 

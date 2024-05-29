@@ -4,6 +4,7 @@ import BarraNavegacao from "./barraNavegacao"
 import ListaCliente from "./listaCliente";
 import ListaProduto from "./listaProduto";
 import ListaServico from "./listaServico";
+import ListaCompra from "./listaCompra";
 import FormularioCadastroClienteEPet from "./cliente/formularioCadastroClienteEPet";
 import FormularioCadastroProduto from "./produto/formularioCadastroProduto";
 import FormularioCadastroServico from "./servico/formularioCadastroServico";
@@ -20,7 +21,7 @@ export default function Roteador() {
     }
 
     const construirView = () => {
-        let barraNavegacao = <BarraNavegacao seletorView={selecionarView} tema="#e3f2fd" botoes={['Clientes', 'Pets', 'Produtos', 'Serviços', 'Cadastrar Cliente/Pet', 'Cadastrar Produto', 'Cadastrar Serviço', 'Comprar', 'Análises']} />
+        let barraNavegacao = <BarraNavegacao seletorView={selecionarView} tema="#e3f2fd" botoes={['Clientes', 'Pets', 'Produtos', 'Serviços', 'Compras', 'Cadastrar Cliente/Pet', 'Cadastrar Produto', 'Cadastrar Serviço', 'Comprar', 'Análises']} />
         if (tela === 'Clientes') {
             return (
                 <>
@@ -47,6 +48,13 @@ export default function Roteador() {
                 <>
                     {barraNavegacao}
                     <ListaServico tema="#e3f2fd" />
+                </>
+            )
+        } else if (tela === 'Compras') {
+            return (
+                <>
+                    {barraNavegacao}
+                    <ListaCompra tema="#e3f2fd" />
                 </>
             )
         } else if (tela === 'Cadastrar Cliente/Pet') {

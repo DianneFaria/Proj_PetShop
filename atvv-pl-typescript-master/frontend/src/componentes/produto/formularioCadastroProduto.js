@@ -11,6 +11,10 @@ export default function FormularioCadastroProduto(props){
 
     const produtoSubmit = useCallback(async (event) => {
         event.preventDefault();
+        if (!codigoProduto || !nomeProduto || !descricaoProduto || !precoProduto) {
+            alert('Por favor, preencha todos os campos do produto.');
+            return;
+        }
         try {
             const response = await api.post('/produtos', {
                 codigoProduto, nomeProduto, descricaoProduto, precoProduto

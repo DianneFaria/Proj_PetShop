@@ -11,6 +11,10 @@ export default function FormularioCadastroServico(props){
 
     const servicoSubmit = useCallback(async (event) => {
         event.preventDefault();
+        if (!codigoServico || !nomeServico || !descricaoServico || !precoServico) {
+            alert('Por favor, preencha todos os campos do serviço.');
+            return;
+        }
         try {
             const response = await api.post('/servicos', {
                 codigoServico, nomeServico, descricaoServico, precoServico
