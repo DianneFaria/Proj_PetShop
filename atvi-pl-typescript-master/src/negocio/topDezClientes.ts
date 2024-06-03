@@ -10,10 +10,11 @@ export default class TopDezClientes {
 
     public exibirTopClientes(): void {
         const topClientes = this.listarTopDezClientes();
-        console.log("Top 10 clientes que mais consumiram em quantidade:");
+        console.log("\n Top 10 clientes que mais consumiram em quantidade:");
         topClientes.forEach((cliente, index) => {
             console.log(`${index + 1}. ${cliente.nome}`);
         });
+        console.log();
     }
 
     private listarTopDezClientes(): Cliente[] {
