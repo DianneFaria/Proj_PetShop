@@ -82,5 +82,6 @@ Existe um arquivo com o nome "banco" que está em backend\banco, ele possui os i
 cd atvv-pl-typescript-master\backend
 npm install
 npm run typeorm -- -d ./src/database/data-source.ts migration:run
+//Adicione os inserts no banco de dados
 npm run dev:server
 ```
