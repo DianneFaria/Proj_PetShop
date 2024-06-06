@@ -1,4 +1,4 @@
-import RegistroConsumo from "../negocio/registroConsumo";
+import RegistroConsumo from "./cadastroConsumo";
 import Cliente from "../modelo/cliente";
 
 export default class TopDezClientes {

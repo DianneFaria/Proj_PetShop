@@ -1,0 +1,56 @@
+INSERT INTO petshop.clientes (nome, nomeSocial, cpf, dataCpf, rg, dataRg, telefone, id)
+VALUES
+  ('Dianne Faria', 'Dianne', '48025878545', 1990-20-10, '963581472', 1990-2-8, '12996612768', 1),
+  ('Dayane Brito', 'Dayane', '47859625814', 2000-12-11, '78639254', 2005-20-8, '15997478569', 2),
+  ('Debora Cruz', 'Debora', '75632847152', 1978-25-11, '789512581', 1978-25-11, '12999635147', 3),
+  ('Valeria Faria', 'Valeria', '14852636985', 1991-22-10, '789358145', 1991-22-10, '14999635147', 4),
+  ('Claudio Roberto', 'Claudio', '78945612323', 1995-12-11, '789557711', 1995-12-11, '13992963789', 5),
+  ('Joao Victor Simao', 'Joao', '45454545454', 2011-11-11, '789589933', 2011-11-11, '18996745896', 6),
+  ('Pedro Brito', 'Pedro', '74125896325', 2005-29-11, '124559988', 2005-29-11, '21996647852', 7),
+  ('Maya Vitoria', 'Maya', '75321489625', 2001-1-1, '775599658', 2001-1-1, '23997965896', 8),
+  ('Paula Simao', 'Paula', '78932145696', 2020-14-2, '756985214', 2020-14-2, '12997741258', 9),
+  ('Miller Santos', 'Miller', '14796325874', 2010-15-5, '882245963', 2010-15-5, '12996612578', 10);
+
+INSERT INTO petshop.pets (cpfDono, nomePet, tipo, raca, genero, id)
+VALUES
+('48025878545', 'Rex', 'Cachorro', 'Golden Retriever', 'Macho', 1 ),
+('47859625814', 'Luna', 'Cachorro', 'Labrador', 'Fêmea', 2),
+('75632847152', 'Tom', 'Gato', 'Siamese', 'Macho', 3),
+('14852636985', 'Bella', 'Gato', 'Persa', 'Fêmea', 4),
+('78945612323', 'Max', 'Cachorro', 'Poodle', 'Macho', 5),
+('45454545454', 'Daisy', 'Cachorro', 'Bulldog', 'Fêmea', 6),
+('74125896325', 'Simba', 'Gato', 'Maine Coon', 'Macho', 7),
+('75321489625', 'Molly', 'Cachorro', 'Beagle', 'Fêmea', 8),
+('78932145696', 'Charlie', 'Cachorro', 'Vira-lata', 'Macho', 9),
+('14796325874', 'Lucy', 'Gato', 'Siamês', 'Fêmea', 10);
+
+INSERT INTO petshop.produtos (codigoProduto, nomeProduto, descricaoProduto, precoProduto, id)
+VALUES
+('1', 'Ração Premium', 'Ração para Cães Adultos', '50', 1),
+('2', 'Coleira Anti-pulgas', 'Coleira repelente de pulgas e carrapatos', '20', 2),
+('3', 'Brinquedo de Pelúcia', 'Brinquedo de pelúcia para entretenimento', '15', 3),
+('4', 'Shampoo Antialérgico', 'Shampoo hipoalergênico para cães', '30', 4),
+('5', 'Caixa de Areia', 'Caixa de areia para gatos com filtro', '40', 5);
+
+INSERT INTO petshop.servicos (codigoServico, nomeServico, descricaoServico, precoServico, id)
+VALUES
+('1', 'Banho', 'Banho com Shampoo', '32', 1),
+('2', 'Tosa', 'Tosa Higiênica', '25', 2),
+('3', 'Consulta Veterinária', 'Consulta com Veterinário', '50', 3),
+('4', 'Vacinação', 'Vacinação Anual', '40', 4),
+('5', 'Hospedagem', 'Hospedagem Diária', '60', 5);
+  
+INSERT INTO petshop.compras (codigoCompra, nomeCliente, cpfCliente, nomeProdServ, codigoProdServ, valor, quantidade, tipoPet, racaPet, totalCompra, id)
+VALUES
+('1', 'Dianne Faria', '48025878545', 'Ração Premium', '1', '50', '1', 'Cachorro', 'Golden Retriever', '50', 1),
+('2', 'Dayane Brito', '47859625814', 'Coleira Anti-pulgas', '2', '20', '2', 'Cachorro', 'Labrador', '40', 2),
+('3', 'Debora Cruz', '75632847152', 'Brinquedo de Pelúcia', '3', '15', '3', 'Gato', 'Siamese', '45', 3),
+('4', 'Valeria Faria', '14852636985', 'Shampoo Antialérgico', '4', '30', '4', 'Gato', 'Persa', '120', 4),
+('5', 'Claudio Roberto', '78945612323', 'Caixa de Areia', '5', '40', '5', 'Cachorro', 'Poodle', '200', 5),
+('6', 'Joao Simao Nanzer', '45454545454', 'Banho', '6', '32', '6', 'Cachorro', 'Bulldog', '192', 6),
+('7', 'Pedro Brito', '74125896325', 'Tosa', '7', '25', '7', 'Gato', 'Maine Coon', '175', 7),
+('8', 'Maya Vitoria', '75321489625', 'Consulta Veterinária', '8', '50', '8', 'Cachorro', 'Beagle', '400', 8),
+('9', 'Paula Simao', '78932145696', 'Vacinação', '9', '40','9', 'Cachorro', 'Vira-lata', '360', 9),
+('10', 'Miller Santos', '14796325874', 'Hospedagem', '10', '60', '10', 'Gato', 'Siamês', '600', 10);
+  
+   

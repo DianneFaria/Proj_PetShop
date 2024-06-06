@@ -1,4 +1,4 @@
-import RegistroConsumo from "../negocio/registroConsumo"
+import RegistroConsumo from "../negocio/cadastroConsumo"
 import Cliente from "./cliente"
 import Produto from "./produto"
 import Servico from "./servico"

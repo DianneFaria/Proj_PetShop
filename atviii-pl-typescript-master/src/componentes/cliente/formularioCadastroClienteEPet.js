@@ -26,6 +26,12 @@ export default function FormularioCadastroClienteEPet(props) {
                         <input type="text" className="form-control" placeholder="Telefone" aria-label="Telefone" aria-describedby="basic-addon1" />
                     </div>
                     <div className="input-group mb-3">
+                        <button className='btn btn-sm btn-light' type="button">+ Adicionar Telefone</button>
+                    </div>
+                    <div className="input-group mb-3">
+                        <button className='btn btn-sm btn-light' type="button">+ Adicionar RG</button>
+                    </div>
+                    <div className="input-group mb-3">
                         <button className="btn btn-outline-secondary" type="button" style={{ background: tema }}>Cadastrar Cliente</button>
                     </div>
 

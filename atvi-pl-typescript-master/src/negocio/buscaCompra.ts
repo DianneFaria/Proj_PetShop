@@ -1,5 +1,5 @@
 import Entrada from "../io/entrada";
-import RegistroConsumo from "../negocio/registroConsumo";
+import RegistroConsumo from "./cadastroConsumo";
 import Produto from "../modelo/produto";
 import Servico from "../modelo/servico";
 
