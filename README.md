@@ -75,10 +75,12 @@ npm run start
 
 Para rodar o back-end do programa deve usar os comandos:
 
+Instale mysql e crie um banco de dados com nome "petshop". Na pasta backend\src\database, edite o arquivo chamado "data-source.ts" com as informações de seu banco.
+Existe um arquivo com o nome "banco" que está em backend\banco, ele possui os inserts que você deve adicionar em seu banco de dados.
+
 ```jsx
 cd atvv-pl-typescript-master\backend
 npm install
+npm run typeorm -- -d ./src/database/data-source.ts migration:run
 npm run dev:server
 ```
-Instale mysql e crie um banco de dados com nome "petshop". Na pasta backend\src\database, edite o arquivo chamado "data-source.ts" com as informações de seu banco.
-Cadastre o cliente, pet, produto, serviço e uma compra para que apareçam nas listagens.
